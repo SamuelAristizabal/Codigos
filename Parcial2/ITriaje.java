@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public interface ITriaje {
     
-    public ArrayList<Paciente> hacerTriaje(Paciente paciente);
+    public ArrayList<Paciente> hacerTriaje(List<Paciente> paciente);
 }
