@@ -1,0 +1,14 @@
+Encapsulamiento:
+    Los atributos de los objetos están todos encapsulados y solo es posible acceder a ellos a través de los métodos de set y get
+
+Herencia:
+    La clase abstracta Paciente es extendida por las clases PacienteUrgente y PacienteCritico, y ya a través de polimorfismo se le aplican los distintos métodos y acciones que se les deben de ejecutar según su tipo
+
+Polimorfismo:
+    Se usa una lista del tipo Paciente en la que se contiene instancias de PacienteUrgente y de PacienteCritico, y a esta se le aplica el método atender() que tiene su propia implementación dependiendo del tipo de paciente al que se le aplique
+
+Modularización:
+    El programa se divide en distintas clases y métodos que permiten la flexibilidad del código, ya que cada módulo tiene su propia tarea, el ControlDelHospital recibe la lista de pacientes que se crea en ZonadeUrgencias, la cual recibe los datos desde la clase RecibirPacientes, los cuales son luego atendidos en la clase Hospital
+
+Principios de diseño:
+    Se usaron interfaces para mantener el orden del código y guiar el proceso, se usó el Principio de la responsabilidad única pues cada clase se encarga de una sola tarea en vez de usar varias, también el Principio de Liskov pues cada clase hija puede reemplazar a su clase madre, se hizo uso del polimorfismo para la flexibilidad del código.
