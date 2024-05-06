@@ -1,0 +1,26 @@
+'''
+https://www.youtube.com/watch?v=VuXbEb5ywrU
+'''
+
+
+from MergeSort import mergeSort
+
+def bucketSort(lista):
+    #Genera "cubos" según la cantidad de elementos en la lista
+    cubos = [[] for _ in range(len(lista))]
+
+    #Inserta los elementos en los índices del arreglo según sea el valor de las unidades del número en la posición i * longitud del arreglo
+    for i in lista:
+        indice_cubo = int(i * len(cubos))  # Asumimos que los elementos están distribuidos uniformemente entre 0 y 1
+        cubos[indice_cubo].append(i)
+
+    # Se ordena cada uno individualmente con un algoritmo auxiliar de ordenamiento
+    for i in range(len(cubos)):
+        cubos[i] = mergeSort(cubos[i])
+
+    # Se juntan todos para hacer una sola lista ya ordenada
+    lista_ordenada = []
+    for i in range(len(cubos)):
+        lista_ordenada += cubos[i]
+
+    return lista_ordenada

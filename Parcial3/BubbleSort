@@ -1,0 +1,16 @@
+'''
+https://github.com/carlosalvarezh/EstructuraDatosAlgoritmos1/blob/main/S10_OrdenacionBusqueda.ipynb
+'''
+
+def bubbleSort(lista):
+    if len(lista) <=1 :
+        print("Por favor ingrese una lista de al menos 2 valores.")
+        return lista
+    else:
+        for i in range(len(lista)): #Se establece un bucle para recorrer toda la lista
+            for j in range(len(lista)-1): #Se establece otro bucle para cada operación de comparación
+                if lista[j] > lista[j + 1]: #Se compara si el próximo elemento es menor que el actual, en caso tal se reemplazan para dejar al menor de primero
+                    temp = lista[j] #Se usa el método swap para reemplazarlos
+                    lista[j] = lista[j+1]
+                    lista[j+1] = temp
+        return lista
